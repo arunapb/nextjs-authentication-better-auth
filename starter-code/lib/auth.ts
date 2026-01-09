@@ -8,7 +8,8 @@ export const auth = betterAuth({
   expiresIn: parseInt(process.env.BETTER_AUTH_EXPIRES_IN || "3600", 10),
   authUrl: process.env.BETTER_AUTH_URL || "http://localhost:3000",
   emailAndPassword: {
-    enabled: true,
+      enabled: true,
+      requireEmailVerification: true,
   },
   socialProviders: {
     google: {
